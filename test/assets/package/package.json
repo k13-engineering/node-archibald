@@ -1,0 +1,13 @@
+{
+  "name": "node-archibald-test-package",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "ARCHibald test package",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "dependencies": {
+    "argparse": "^2.0.1"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "node-archibald",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "ARCHibald node test runner for different architectures and node versions",
+  "main": "lib/index.js",
+  "bin": {
+    "archibald": "lib/cli.js"
+  },
+  "scripts": {
+    "test": "c8 --reporter lcov --reporter html --reporter text mocha",
+    "eslint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k13-engineering/node-archibald.git"
+  },
+  "keywords": [
+    "architecture",
+    "test",
+    "docker"
+  ],
+  "author": "Simon Kadisch",
+  "license": "LGPL 2.1",
+  "bugs": {
+    "url": "https://github.com/k13-engineering/node-archibald/issues"
+  },
+  "homepage": "https://github.com/k13-engineering/node-archibald#readme",
+  "dependencies": {
+    "argparse": "^2.0.1",
+    "dockerode": "^3.2.1",
+    "node-dockerfiler": "0.0.2",
+    "nodegit": "^0.27.0",
+    "prepend-transform": "0.0.1019",
+    "tar-fs": "^2.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/eslint-parser": "^7.12.1",
+    "@babel/plugin-syntax-top-level-await": "^7.12.1",
+    "c8": "^7.3.0",
+    "eslint": "^7.9.0",
+    "mocha": "^8.1.3"
+  }
+}
