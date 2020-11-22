@@ -30,7 +30,6 @@
     "argparse": "^2.0.1",
     "dockerode": "^3.2.1",
     "node-dockerfiler": "0.0.2",
-    "nodegit": "^0.27.0",
     "prepend-transform": "0.0.1019",
     "tar-fs": "^2.1.0"
   },
