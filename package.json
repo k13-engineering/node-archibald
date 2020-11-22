@@ -1,7 +1,7 @@
 {
   "name": "node-archibald",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "ARCHibald node test runner for different architectures and node versions",
   "main": "lib/index.js",
   "bin": {
