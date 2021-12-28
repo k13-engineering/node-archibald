@@ -15,6 +15,8 @@ const dummySink = new stream.Writable({
   write () {}
 });
 
+const NODE_MAJOR_VERSION = parseInt(process.versions.node.split(".")[0], 10);
+
 describe("ARCHibald", function () {
   this.timeout(120 * 1000);
 
@@ -22,7 +24,7 @@ describe("ARCHibald", function () {
     const result = await archibald.test({
       "pkg": path.resolve(dirnameOfScript, "assets", "package"),
       "architecture": "amd64",
-      "nodeVersion": process.version,
+      "nodeVersion": NODE_MAJOR_VERSION,
       "logSink": dummySink
     });
 
@@ -33,7 +35,7 @@ describe("ARCHibald", function () {
     const result = await archibald.test({
       "pkg": path.resolve(dirnameOfScript, "assets", "package"),
       "architecture": "amd64",
-      "nodeVersion": process.version,
+      "nodeVersion": NODE_MAJOR_VERSION,
       "env": [
         "TEST_SHOULD_FAIL=1"
       ],
