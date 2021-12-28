@@ -1,6 +1,6 @@
 import archibald from "../lib/index.js";
 
-const { exitCode } = await archibald.test({
+archibald.test({
   "pkg": ".",
   "architecture": "amd64",
   "nodeVersion": 12,
@@ -12,6 +12,8 @@ const { exitCode } = await archibald.test({
   "privileged": false,
   // where to write the logs
   "logSink": process.stdout
+}).then(({ exitCode }) => {
+  console.log(`Exited with ${exitCode}`);
+}).catch((err) => {
+  console.error(err);
 });
-
-console.log(`Exited with ${exitCode}`);
